@@ -1,0 +1,61 @@
+@import '../../themes/style/default.scss';
+@import '../../themes/style/_function.scss';
+$buttonPrefixCls: am-button;
+.#{$buttonPrefixCls} {
+    display: flex;
+    outline: 0 none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    height: px2rem($button-height);
+    font-size: px2rem($button-font-size);
+    border-radius: px2rem($radius-md);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $color-text-base;
+    border: $border-width-sm solid $border-color-base;
+    background-color: $fill-base;
+    &-active {
+        background-color: $fill-tap;
+    }
+    &-primary {
+        color: $color-text-base-inverse;
+        background-color: $primary-button-fill;
+        border-color: $primary-button-fill;
+        &.#{$buttonPrefixCls}-active {
+            background-color: $primary-button-fill-tap;
+        }
+    }
+    &-ghost {
+        color: $ghost-button-color;
+        background: transparent;
+        border: $border-width-sm solid $ghost-button-color;
+        &.#{$buttonPrefixCls}-active {
+            background-color: $ghost-button-fill-tap
+        }
+    }
+    &-disabled {
+        color: $color-text-disabled;
+        background-color: $fill-disabled;
+        border-color: $fill-disabled;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-inline {
+        display: inline-flex;
+        padding: 0 px2rem($h-spacing-lg);
+        &.#{$buttonPrefixCls}-icon {
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+    &-small {
+        height: px2rem($button-height-sm);
+        font-size: px2rem($button-font-size-sm);
+        line-height: px2rem($button-height-sm);
+        padding: 0 px2rem($h-spacing-md);
+    }
+}
